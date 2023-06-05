@@ -1,0 +1,11 @@
+.recommended{
+    display: flex;
+    flex-flow: hidden;
+}
+.movie-items>img{
+     width: 300px;
+     margin-right: 5px;
+}
+h2{
+    color: white;
+}
