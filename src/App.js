@@ -14,7 +14,7 @@ function App() {
 
 
 useEffect(()=>{
-  fetch('http://localhost:8000/movies')
+  fetch('https://swc-react-ebon.vercel.app/movies')
   .then(res=>{
     return res.json();
   })
