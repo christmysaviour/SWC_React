@@ -6,28 +6,9 @@ import Paul from "./Components/Paul/Paul";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Slider from "./Components/Slider/Slider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect,useState } from "react";
+import movies from "../data/db";
 
 function App() {
-
-  const [movies,serMovies] = useState(null)
-
-
-useEffect(()=>{
-  fetch('https://swc-react-ebon.vercel.app/movies')
-  .then(res=>{
-    return res.json();
-  })
-  .then(data=>{
-    console.log(data);
-    serMovies(data)
-  
-  }
-  )
-  .catch(err=>{
-    console.log(err)
-  })
-},[])
 
 
   return (
@@ -62,3 +43,4 @@ useEffect(()=>{
 }
 
 export default App;
+
