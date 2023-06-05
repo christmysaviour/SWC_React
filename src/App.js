@@ -6,7 +6,7 @@ import Paul from "./Components/Paul/Paul";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Slider from "./Components/Slider/Slider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import movies from "../data/db";
+import movies from "./data/db";
 
 function App() {
 
