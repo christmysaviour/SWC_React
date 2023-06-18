@@ -4,12 +4,13 @@ import passion from './passion.jpg';
 import paul from './paul-movie-hero.jpg'
 import thecase from './the-case.jpg'
 import './Slider.css'
+import movies from '../Home/db';
+
+
 
 const Slider = () => {
-  const images = [
-    paul,chosen,passion,thecase
-  ];
-
+  const images = movies.filter(movie=>movie.slider==="yes")
+  console.log(images)
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handlePrev = () => {
@@ -17,6 +18,8 @@ const Slider = () => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
+  
+  
 
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -27,7 +30,7 @@ const Slider = () => {
   return (
     <div className="slider">
       <img
-        src={images[currentImageIndex]}
+        src={images[currentImageIndex].titleImg}
         alt={`Image ${currentImageIndex + 1}`}
         className="slider-image"
       />
@@ -39,6 +42,7 @@ const Slider = () => {
         <button className="slider-button" onClick={handleNext}>Next</button>
         </div>
       </div>
+     
     </div>
   );
 };

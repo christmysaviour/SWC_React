@@ -2,9 +2,10 @@
     display: flex;
     flex-flow: hidden;
 }
-.movie-items>img{
-     width: 300px;
+.movie-items>a>img{
+     width: 296px;
      margin-right: 5px;
+     
 }
 h2{
     color: white;

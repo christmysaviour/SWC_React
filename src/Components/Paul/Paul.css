@@ -1,42 +1,57 @@
 .Paul {
-    position: relative;
-  }
-  
-  .Paul > img {
-    width: 100%;
-    height: fit-content;
-  }
-  
-  .paul-content {
-    position: absolute;
-    top: 550px;
-    left: 50px;
-    z-index: 1;
+  position: relative;
+}
 
-  }
-  .btn-play{
-    display: flex;
-  }
-  .play{
-      color: black;
-      display: flex;
-      align-items: center;
-      margin-right: 50px;
-      padding: 5px 20px;
-  }
-  .trailer{
-    background-color: rgba(0, 0, 0, 0.253);
+.Paul > img {
+  width: 100%;
+  height: fit-content;
+}
+
+
+.btn-play{
+  display: flex;
+}
+.play{
+    color: black;
     display: flex;
     align-items: center;
+    margin-right: 50px;
     padding: 5px 20px;
-  }
-  .description{
-    color: black;
-    margin-top: 20px;
-  }
-  .btn{
-    height: 30px;
-  }
-  .add{
-    margin-left: 20px;
-  }
+}
+.trailer{
+  background-color: rgba(0, 0, 0, 0.253);
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+.description{
+  color: black;
+  margin-top: 20px;
+}
+.btn{
+  height: 30px;
+}
+.add{
+  margin-left: 20px;
+}
+.description>h3{
+  color: white;
+}
+.parent{
+position: relative;
+}
+.title{
+position: absolute;
+width: 20rem;
+height: fit-content;
+z-index: 1;
+top: 10rem;
+left: 4rem;
+}
+.paul-content{
+position:absolute;
+top: 25rem ;
+z-index: 1;
+left: 2rem;
+margin-right: auto;
+}

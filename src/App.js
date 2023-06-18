@@ -6,31 +6,14 @@ import Paul from "./Components/Paul/Paul";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Slider from "./Components/Slider/Slider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect,useState } from "react";
-
+import movies from "./data/db";
+import Single from "./Components/Individual/Single";
+import { Provider } from 'react-redux';
+import store from './Components/Redux/store';
 function App() {
 
-  const [movies,serMovies] = useState(null)
-
-
-useEffect(()=>{
-  fetch('http://localhost:8000/movies')
-  .then(res=>{
-    return res.json();
-  })
-  .then(data=>{
-    console.log(data);
-    serMovies(data)
-  
-  }
-  )
-  .catch(err=>{
-    console.log(err)
-  })
-},[])
-
-
   return (
+    <Provider store={store}>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login/>}/>
@@ -55,9 +38,17 @@ useEffect(()=>{
       </>
     }
       />
+      <Route path="movies/:id" element={
+        <>
+        <Navbar/>
+        <Single  movies={movies}/>
+        <Footer/>
+        </>
+      }/>
     </Routes>
 
     </BrowserRouter>
+    </Provider>
   );
 }
 
