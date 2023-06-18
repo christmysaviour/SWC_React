@@ -8,8 +8,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../Redux/favouritesActions';
 const Single = ({ movies }) => {
 
-    const { id } = useParams(); // Retrieve the movie ID from the URL parameter
-    const movie = movies.find(movie => movie.id === parseInt(id)); // Find the movie based on the ID
+    const { id } = useParams(); 
+    const movie = movies.find(movie => movie.id === parseInt(id)); 
     
     const favorites = useSelector((state) => state.favorites.favorites);
     const dispatch = useDispatch();
